@@ -65,6 +65,110 @@ section h3 {
   background-color: #f9f9f9;
 }
 
+.activity-card {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.12);
+}
+
+/* Participants section */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.participants-section h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+.participants-list {
+  list-style: none; /* hide default bullets */
+  margin: 0;
+  padding-left: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.participant-remove {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.participant-remove:hover {
+  background: rgba(211,47,47,0.06);
+}
+
+.participant-remove:focus {
+  outline: 2px solid rgba(211,47,47,0.12);
+}
+
+/* SVG icon transitions */
+.participant-remove svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.14s ease, opacity 0.14s ease;
+  transform-origin: center;
+  color: #d32f2f; /* used by stroke via currentColor */
+}
+
+.participant-remove:hover svg {
+  transform: rotate(18deg) scale(1.05);
+  opacity: 0.98;
+}
+
+.participant-remove:active svg {
+  transform: rotate(0deg) scale(0.98);
+}
+
+/* Disabled button appearance */
+button[disabled], .participant-remove[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.participant-email {
+  color: #0066cc;
+  font-weight: 500;
+  background: rgba(0,102,204,0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.no-participants {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  padding: 6px 0;
+}
+
+
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
